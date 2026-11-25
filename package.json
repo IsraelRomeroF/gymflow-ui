@@ -1,0 +1,55 @@
+{
+  "name": "@gymflow/ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lo que comparten el panel y el portal de GymFlow: tokens, estilos y piezas de diseño (React).",
+  "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./compartido.css": "./src/compartido.css",
+    "./compartido": "./src/compartido.tsx",
+    "./dialogo": "./src/dialogo.tsx",
+    "./campos": "./src/campos.tsx",
+    "./carga": "./src/carga.tsx",
+    "./format": "./src/format.ts",
+    "./formulario": "./src/formulario.ts",
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "packageManager": "pnpm@10.26.0",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test scripts",
+    "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test test/format.test.ts",
+    "test:estilos": "node scripts/estilos-en-linea.mjs",
+    "test:solo": "node scripts/solo-lo-compartido.mjs",
+    "verify": "pnpm typecheck && pnpm lint && pnpm test && pnpm test:estilos && pnpm test:solo"
+  },
+  "peerDependencies": {
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "22.20.4",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "lucide-react": "1.48.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.1"
+  }
+}

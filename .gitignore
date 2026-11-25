@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.env
+*.tsbuildinfo
+# Bitácoras de cualquier guion (auditoría 8, 27-14).
+*.log
